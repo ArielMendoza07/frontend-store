@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Frontend Store</title>
+     <link rel="stylesheet" href="CSS/normalize.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Ibarra+Real+Nova:wght@500&display=swap"
+          rel="stylesheet">
+     <link rel="stylesheet" href="CSS/styles.css">
+     <script src="JS/script.js"></script>
+</head>
+
+<body>
+     <header class="header">
+          <a href="index.html">
+               <img class="header__logo" src="IMG/batmanLogo.png" alt="batmanLogo">
+          </a>
+     </header>
+
+     <nav class="navegacion">
+          <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">DC and Marvel Store</a>
+          <a class="navegacion__enlace" href="aboutUs.html">About us</a>
+     </nav>
+
+     <main class="contenedor">
+          <h1>Batman</h1>
+
+          <div class="camisa">
+               <img src="IMG/batman.jpg" class="camisa__imagen" alt="batman">
+
+               <div class="camisa__contenido">
+                    <p>
+                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                         the
+                         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                         type
+                         and scrambled it to make a type specimen book. It has survived not only five centuries, but
+                         also the
+                         leap into electronic typesetting, remaining essentially unchanged.
+                    <form action="" class="formulario">
+                         <select class="formulario__campo">
+                              <option disabled selected>-- Talla --</option>
+                              <option>Chica</option>
+                              <option>Mediana</option>
+                              <option>Grande</option>
+                         </select>
+                         <input class="formulario__campo" type="number" placeholder="Cantidad" min="1" max="1000">
+                         <input class="formulario__submit" type="submit" value="Agregar ahora">
+                    </form>
+                    </p>
+               </div>
+          </div>
+     </main>
+
+     <footer class="footer">
+          <p class="footer__texto"> DC and Marvel Store - All rights reserved 2022</p>
+     </footer>
+</body>
+
+</html>

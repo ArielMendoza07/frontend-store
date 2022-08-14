@@ -1,0 +1,244 @@
+:root {
+  /* COLORES */
+  --morado: #9c27b0;
+  --moradoOscuro: #89119d;
+  --amarillo: #ffce00;
+  --amarilloOscuro: rgb(233, 187, 2);
+  --blanco: #fff;
+  --negro: #000;
+
+  /* FUENTES */
+  --fuentePrincipal: "Alegreya", serif;
+}
+
+/* PAUL IRISH BOX-SIZING */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* GLOBALES */
+body {
+  background-color: var(--morado);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blanco);
+}
+a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: var(--blanco);
+  font-family: var(--fuentePrincipal);
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+
+/* HEADER / LOGO*/
+header {
+  width: 20rem;
+  /* display: block; */
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: rgba(20, 20, 20, 0.877);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footer__texto {
+  text-align: center;
+  font-family: var(--fuentePrincipal);
+}
+
+/* NAVEGACION */
+.navegacion {
+  background-color: rgba(20, 20, 20, 0.877);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 6rem; /*Separación entre elementos, con flex */
+  width: 100%;
+}
+.navegacion__enlace {
+  font-family: var(--fuentePrincipal);
+  font-size: 2.4rem;
+  color: var(--blanco);
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+  color: var(--amarilloOscuro);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* PRODUCTOS */
+.producto {
+  background-color: rgba(20, 20, 20, 0.877);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+.producto__imagen {
+  width: 100%;
+}
+.producto__nombre {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.producto__precio {
+  text-align: center;
+  color: var(--amarillo);
+}
+.producto__nombre,
+.producto__precio {
+  font-family: var(--fuentePrincipal);
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+/* LOGOS */
+.grafico {
+  min-height: 30rem;
+  width: 100%;
+  border-radius: 3rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 1 / 3;
+}
+.grafico--dc {
+  grid-row: 2 / 3;
+
+  background-image: url(../IMG/dc.jpg);
+  /*  background-size: cover;
+    position: relative; */
+  background-position: center center;
+}
+.grafico--marvel {
+  background-image: url(../IMG/marvel.jpg);
+  grid-row: 8 / 9;
+  background-position: center center;
+}
+@media (min-width: 768px) {
+  .grafico--marvel {
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
+  }
+}
+
+/* NOSOTROS */
+.nosotros {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  padding: 0 3rem 2rem 3rem;
+}
+@media (min-width: 768px) {
+  .nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+.nosotros__imagen {
+    grid-row: 1 / 2;
+    width: 100%;
+    border-radius: 2rem;
+}
+@media (min-width: 768px) {
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+}
+
+/* POR QUE COMPRAR */
+section p{
+    display: block;
+    width: 100%;
+    padding: 0 3rem 0 3rem;
+}
+
+@media (max-width: 768px) {
+    .comprar__titulo{
+        font-size: 3rem;
+    }
+}
+
+/* PRODUCTO */
+@media (min-width: 768px) {
+    .camisa{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+    }
+}
+.formulario{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.formulario__campo{
+  border-color: rgba(0, 0, 0, 0.701);
+  border-width: .5rem;
+  border-style: solid;
+  background-color: transparent;
+  color: var(--blanco);
+  font-family: var(--fuentePrincipal);
+  font-size: 2rem;
+  padding: 1rem .5rem 2rem .5rem;
+  appearance: none;
+}
+.formulario__submit{
+  background-color: var(--amarillo);
+  border: none;
+  font-size: 2rem;
+  font-family: var(--fuentePrincipal);
+  padding: 2rem;
+  transition: background-color .4s ease;
+  grid-column: 1 / 3;
+}
+.formulario__submit:hover{
+  cursor: pointer;
+  background-color: var(--amarilloOscuro);
+}
